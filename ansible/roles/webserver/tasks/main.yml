@@ -1,0 +1,32 @@
+---
+- name: Make sure log files exist
+  become: true
+  file: >
+    dest={{ item }}
+    state=touch
+    owner=root group=root mode=0640
+    force=yes
+  with_items:
+    - /var/log/nginx/police.error.log
+    - /var/log/nginx/police.access.log
+
+- name: Create virtualhost
+  become: true
+  template: >
+    src=virtualhost.conf.j2
+    dest=/etc/nginx/sites-available/police.com.conf
+    owner=root group=root mode=0644
+
+- name: Enable the virtualhost
+  become: true
+  file: >
+    src=/etc/nginx/sites-available/police.com.conf
+    dest=/etc/nginx/sites-enabled/police.com.conf
+    state=link
+  notify:
+    - restart nginx
+    - restart php7-fpm
+
+- name: Allow nignx connections on firewall
+  become: true
+  ufw: rule=allow name="Nginx Full"

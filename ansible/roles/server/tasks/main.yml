@@ -1,0 +1,29 @@
+---
+- name: Update apt
+  become: yes
+  apt: update_cache=yes
+
+- name: Install System Packages
+  become: true
+  apt: pkg={{ item }} state=latest
+  with_items:
+    - curl
+    - wget
+    - python-software-properties
+    - language-pack-en-base
+
+- name: Configure the timezone
+  become: true
+  template: src=timezone.tpl dest=/etc/timezone
+
+- name: More Configure the timezone
+  become: true
+  file: src=/usr/share/zoneinfo/{{app.timezone}} dest=/etc/localtime state=link force=yes backup=yes
+
+- name: Disable all the connections from outside
+  become: true
+  ufw: state=enabled policy=deny
+
+- name: Allow ssh
+  become: true
+  ufw: rule=allow name=OpenSSH

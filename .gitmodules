@@ -1,0 +1,9 @@
+[submodule "ansible/roles/overdrive3000.ansible-percona"]
+	path = ansible/roles/overdrive3000.ansible-percona
+	url = git@github.com:Xobb/ansible-percona.git
+[submodule "ansible/roles/nginx"]
+	path = ansible/roles/nginx
+	url = git@github.com:geerlingguy/ansible-role-nginx.git
+[submodule "ansible/roles/nodejs"]
+	path = ansible/roles/nodejs
+	url = git@github.com:geerlingguy/ansible-role-nodejs.git

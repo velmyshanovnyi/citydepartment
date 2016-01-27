@@ -1,0 +1,15 @@
+# This file is auto-generated ansible build
+# Do please do not update it manually, better look at ansible/group_vars/<env>.yml
+# ansible/group_vars/all.yml is used as an example.
+parameters:
+    database_driver: {{app.db.driver}}
+    database_host: {{app.db.host}}
+    database_port: {{app.db.port}}
+    database_name: {{app.db.name}}
+    database_user: {{app.db.user}}
+    database_password: {{app.db.pass}}
+    mailer_transport: {{app.mailer.transport}}
+    mailer_host: {{app.mailer.host}}
+    mailer_user: {{app.mailer.user}}
+    mailer_password: {{app.mailer.pass}}
+    secret: {{app.secret}}

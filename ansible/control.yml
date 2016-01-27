@@ -1,0 +1,19 @@
+---
+- hosts: control
+  roles:
+    - server
+    - control
+  tags:
+    - vagrant
+
+- hosts: control
+  become: yes
+  vars:
+    nodejs_version: "4.2"
+    nodejs_npm_global_packages:
+      - name: less
+      - name: node-sass
+  roles:
+    - nodejs
+  tags:
+    - vagrant

@@ -1,0 +1,5 @@
+---
+- include: database.yml
+- include: web.yml
+- include: app.yml
+- include: control.yml

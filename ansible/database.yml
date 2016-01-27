@@ -1,0 +1,15 @@
+---
+- hosts: db
+  become: true
+  vars:
+    - root_password: "{{ app.mysql_root_password }}"
+    - create_app_db: true
+    - db_name: "{{ app.db.name }}"
+    - db_user: "{{ app.db.user }}"
+    - db_host: "{{ app.db.host }}"
+    - db_user_password: "{{ app.db.pass }}"
+  roles:
+    - server
+    - overdrive3000.ansible-percona
+  tags:
+    - db
