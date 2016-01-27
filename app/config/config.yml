@@ -70,3 +70,9 @@ fos_user:
     db_driver: orm
     user_class: AppBundle\Entity\User
     firewall_name: main
+
+stof_doctrine_extensions:
+    default_locale: en_US
+    orm:
+        default:
+            timestampable: true
