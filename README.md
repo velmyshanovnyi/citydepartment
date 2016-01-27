@@ -11,7 +11,7 @@
 Для створення середовища розробки вам необхідно встановити наступні програмні продукти:
 
 * [Vagrant](https://www.vagrantup.com/downloads.html)
-* [VirtualBox](
+* [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
 Якщо ви користуєтесь Linux чи OSX то також рекомендується встановити Ansible.
 
