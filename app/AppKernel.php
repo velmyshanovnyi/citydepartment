@@ -25,6 +25,7 @@ class AppKernel extends Kernel
             new \FOS\RestBundle\FOSRestBundle(),
             new \Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new \Mopa\Bundle\BootstrapBundle\MopaBootstrapBundle(),
+            new Bmatzner\JQueryBundle\BmatznerJQueryBundle(),
 
             // application bundles
             new AppBundle\AppBundle(),
