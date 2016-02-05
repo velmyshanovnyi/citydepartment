@@ -70,6 +70,9 @@ fos_user:
     db_driver: orm
     user_class: AppBundle\Entity\User
     firewall_name: main
+    registration:
+        form:
+            type: AppBundle\Form\Type\RegistrationType
 
 stof_doctrine_extensions:
     default_locale: en_US

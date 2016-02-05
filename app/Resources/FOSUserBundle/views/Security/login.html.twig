@@ -15,8 +15,8 @@
 
             <h2 class="form-login-heading">Please sign in</h2>
 
-            <label for="username" class="sr-only required">Email:</label>
-            <input type="email" id="username" name="_username" value="{{ last_username }}" placeholder="Email" required="required" class="form-control">
+            <label for="username" class="sr-only required">Username:</label>
+            <input type="text" id="username" name="_username" value="{{ last_username }}" placeholder="Email" required="required" class="form-control">
 
             <label for="password" class="sr-only required">Password:</label>
             <input type="password" id="password" name="_password" placeholder="Password" required="required" class="form-control">
@@ -32,7 +32,7 @@
         </form>
 
         <p class="text-center small-text">
-            Don't have Account? <a href="{{ path('fos_user_registration_register') }}">Sign Up</a>
+            Don't have account? <a href="{{ path('fos_user_registration_register') }}">Register</a>
         </p>
     </div>
 {% endblock content %}

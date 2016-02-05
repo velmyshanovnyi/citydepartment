@@ -2,12 +2,17 @@
 
 {% block head_style%}
     {{ parent() }}
-        {% stylesheets
-        '../app/Resources/public/css/*.css'
-        filter='cssrewrite'
-        %}
-        <link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="screen" />
-        {% endstylesheets %}
+
+    {% stylesheets
+    '../app/Resources/public/css/*.css'
+    filter='cssrewrite'
+    %}
+    <link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="screen" />
+    {% endstylesheets %}
+{% endblock %}
+
+{% block title %}
+    City Police Department
 {% endblock %}
 
 {% block navbar %}

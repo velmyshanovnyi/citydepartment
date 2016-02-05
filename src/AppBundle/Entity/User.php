@@ -20,9 +20,9 @@ class User extends BaseUser
     /**
      * @var string
      *
-     * @ORM\Column(name="phone_number", type="string")
+     * @ORM\Column(name="phone_number", type="string", nullable=true)
      */
-    private $phone_number;
+    private $phoneNumber;
 
     /**
      * @return mixed
@@ -47,16 +47,16 @@ class User extends BaseUser
      */
     public function getPhoneNumber()
     {
-        return $this->phone_number;
+        return $this->phoneNumber;
     }
 
     /**
-     * @param string $phone_number
+     * @param string $phoneNumber
      * @return User
      */
-    public function setPhoneNumber($phone_number)
+    public function setPhoneNumber($phoneNumber)
     {
-        $this->phone_number = $phone_number;
+        $this->phoneNumber = $phoneNumber;
         return $this;
     }
 }

@@ -28,7 +28,7 @@ body {
     font-size: 16px;
 }
 
-.form-login input[type="email"] {
+.form-login input[type="text"] {
     margin-bottom: -1px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
@@ -38,4 +38,43 @@ body {
     margin-bottom: -1px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+}
+
+
+.form-register {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.form-register .form-login-heading {
+    margin-bottom: 10px;
+}
+
+.form-register .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-register input#fos_user_registration_form_username {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-register input[type="password"],
+.form-register input[type="email"]{
+    margin-bottom: -1px;
+    border-radius: 0;
+}
+
+.form-register input#fos_user_registration_form_phoneNumber {
+    margin-bottom: 20px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
 }
