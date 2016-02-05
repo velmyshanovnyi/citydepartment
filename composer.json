@@ -5,7 +5,8 @@
     "autoload": {
         "psr-4": {
             "": "src/"
-        }
+        },
+        "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
     },
     "require": {
         "php": ">=5.5.9",
@@ -28,7 +29,8 @@
         "mopa/bootstrap-bundle": "^3.0",
         "twbs/bootstrap": "^3.3",
         "knplabs/knp-menu-bundle": "^2.1",
-        "jms/serializer-bundle": "^1.1"
+        "jms/serializer-bundle": "^1.1",
+        "bmatzner/jquery-bundle": "^2.1"
     },
     "require-dev": {
         "ext-pdo_sqlite": "*",
