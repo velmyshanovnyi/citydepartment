@@ -1,0 +1,350 @@
+mainFont = 'casper_boldregular', Arial, sans-serif
+*
+	box-sizing border-box
+html
+	height 100%
+html
+body
+	position relative
+	background-color #fff
+	margin 0
+	height 100%
+	.order-active
+		&:before
+			content ""
+			position absolute
+			top 0
+			left 0
+			width 100%
+			height 100%
+			background-color rgba(247,44,54, 0.19)
+			display block
+			z-index 1
+		.sidebar
+			display none
+		.sidebar-order
+			display block
+			&:before
+				background-image url(../images/darck-bg-shadow.png)
+			
+body
+	font-family mainFont
+	font-weight normal
+	font-size 1em
+// helper classes
+.sr-only
+	position absolute
+	width 1px
+	height 1px
+	padding 0
+	margin -1px
+	overflow hidden
+	clip rect(0,0,0,0)
+	border 0
+.blue
+	color #1ca0fd
+.yellow
+	color #ffd824
+.header
+	text-align center
+	height 40px
+	background-color #101010
+	padding 0 15px
+	position fixed
+	width 100%
+	&__lang
+		text-decoration none
+		text-transform uppercase
+		font-size 0.9em
+		float left
+		padding 12px 15px 12px 0
+.menu
+	list-style none
+	display inline-block
+	padding 0
+	margin 0
+	float left
+	&__item
+		padding 0 5px
+		border-right 1px solid #171717
+		display inline-block
+		vertical-align middle
+		text-align left
+		&:before
+			content ""
+			display block
+			float left
+			background-image url(../images/icons.png)
+			background-size 120px 225px
+			padding-right 5px
+			margin-top 5px
+		&.first-child
+			border-left 1px solid #171717
+			line-height 1
+			span
+				margin-top -3px
+				display block
+		a 
+			padding 8px 0
+			display inline-block
+			font-size 0.8em
+			color #6fb2ed
+			text-decoration none
+			&:hover
+				color #4993d4
+	.icon
+		&__map
+			&:before
+				width 20px 
+				height 24px
+				background-position 0 0
+		&__cctv
+			&:before
+				width 24px 
+				height 24px
+				background-position -23px -2px
+		&__cop
+			&:before
+				width 24px 
+				height 24px
+				background-position -48px -2px
+		&__light
+			&:before
+				width 20px 
+				height 24px
+				background-position -74px -2px			
+.map-box
+	width 100%
+	height 100%
+	padding-right 260px
+.sidebar-order
+	display none
+.sidebar-order
+.sidebar
+	overflow scroll
+	z-index 2
+	text-align center
+	background-color #171717
+	position absolute
+	top 0
+	right 0
+	height 100%
+	width 260px
+	&__title
+		color #f72c36
+		z-index 10
+		position relative
+		font-size 1.25em
+	&__content
+		overflow-y auto
+		margin-top 20px
+		padding 0 20px 0 15px
+		color #fff
+		text-align left
+		h2
+			font-size 1em
+			margin 10px 0
+			position relative
+			z-index 5
+	&:before
+		content ""
+		position absolute
+		top 3px
+		right 0
+		background-image url(../images/darck-bg.png)
+		background-size 300px 70px
+		width 300px
+		height 70px
+	&__button
+		&-order
+			background-image url(../images/button.png)
+			background-repeat no-repeat
+			background-color transparent
+			border 0 none
+			background-size 100%
+			display inline-block
+			width 215px
+			height 52px
+			z-index 100
+			position relative
+			margin-top 5px
+			cursor pointer
+			outline none
+		&-search
+			background-image url(../images/search-button.jpg)
+			background-repeat no-repeat
+			background-color transparent
+			border 0 none
+			background-size 100%
+			display block
+			width 88px
+			height 32px
+			cursor pointer
+			outline none
+			margin 10px auto 30px
+.logo
+	position absolute
+	top 0
+	left 50%
+	margin 0 0 0 -230px
+	width 350px
+	display inline-block
+	text-align center
+	background-image url(../images/logo-bg.png)
+	background-size 350px 110px
+	background-repeat no-repeat
+	&__image
+		width 230px
+.districts
+.kinds
+	&__items
+		text-align left
+		font-size 10px
+		padding 0 15px 0 5px
+		color #7d7d7d
+.districts
+	&__items
+		margin-top -20px
+.districts
+	position relative
+	&__list
+		list-style none
+		position absolute
+		top 0
+		padding 0
+		width 100%
+		height 100%
+	img 
+		width 225px
+		margin-top -30px
+	&__item
+		width 20px
+		height 20px
+		border-radius 100%
+		border 3px solid #fff
+		cursor pointer
+		&.first
+			position absolute
+			top 40px 
+			left 50%
+		&.second
+			position absolute
+			top 80px 
+			left 50px
+		&.third
+			position absolute
+			top 80px 
+			left 50px
+		&.third
+			position absolute
+			top 105px 
+			left 95px
+		&.fourth
+			position absolute
+			top 70px 
+			left 150px
+		&.fifth
+			position absolute
+			top 125px 
+			left 130px
+		&.active
+			&:before
+				content ""
+				background-image url(../images/icons.png)
+				background-size 120px 225px
+				background-position -101px -4px
+				width 20px
+				height 20px
+				display inline-block			
+.kinds
+	padding 0
+	margin 0 -5px
+	text-align center
+	&-big 
+		.kinds__item
+			width 40%
+	&__item
+		position relative
+		width 23%
+		display inline-block
+		vertical-align top
+		font-size 9px
+		text-align center
+		cursor pointer
+		color #fff
+		&.active
+			&:before
+				content ""
+				position absolute
+				top 25px
+				right 0
+				background-image url(../images/icons.png)
+				background-size 120px 225px
+				background-position -98px -2px
+				width 22px
+				height 24px
+				display inline-block
+	&__title
+		vertical-align middle
+		display inline-block
+		line-height 1
+	&__image
+		width 37px 
+		height 37px
+		margin 0 auto
+		display block
+		background-image url(../images/icons.png)
+		background-size 120px 225px
+		&.drugs
+			background-position -3px -27px
+		&.fraud
+			background-position -43px -27px
+		&.fire
+			background-position -81px -27px
+		&.property
+			background-position -3px -67px
+		&.embezzlement
+			background-position -43px -67px
+		&.theft
+			background-position -83px -67px
+		&.extortion
+			background-position -3px -107px
+		&.rape
+			background-position -43px -107px
+		&.looting
+			background-position -83px -107px
+		&.brigandage
+			background-position -3px -147px
+		&.web
+			background-position -83px -147px
+		&.police
+			background-position -44px -147px
+.data-event
+	.kinds 
+		&__image-box
+			width 38px
+			height 38px
+			margin 0 auto
+			overflow hidden
+			border 3px solid #f00
+			border-radius 100%			
+			box-shadow inset 0px 0px 35px rgba(255, 0, 0, 0.6)
+			.kinds 
+				&__image
+					margin -2px
+		&__item
+			&.active
+				&:before
+					background-position -98px -202px
+
+
+
+
+
+
+
+	
+
+
+
+
