@@ -146,6 +146,7 @@ body {
   width: 100%;
   height: 100%;
   padding-right: 260px;
+  padding-top: 40px;
 }
 .sidebar-order,
 .sidebar {
@@ -166,6 +167,7 @@ body {
   width: 18px;
   height: 18px;
   float: right;
+  margin-top: -10px;
 }
 .sidebar-order__title,
 .sidebar__title {
@@ -324,7 +326,7 @@ body {
 }
 .sidebar-order {
   display: none;
-  inset: 9px 0px 72px 1px rgba(255,0,0,0.2);
+  box-shadow: inset 9px 0px 72px 1px rgba(255,0,0,0.2);
 }
 .sidebar-order:before {
   background-size: 260px 67px;
@@ -332,7 +334,7 @@ body {
   height: 67px;
 }
 .sidebar-order h2.collapse__title:after {
-  border-top: 5px solid #f72c36 !important;
+  border-top: 5px solid #f72c36;
 }
 .logo {
   position: absolute;
@@ -529,53 +531,13 @@ body {
 .collapse.active .collapse__content {
   height: auto;
 }
-.modal {
-  display: none;
-  background-color: rgba(59,63,69,0.8);
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  position: fixed;
-  top: 0;
-  left: 0;
+.collapse.active .collapse__title:after {
+  border-bottom: 5px solid #fff;
+  border-top: 0;
 }
-.modal.active {
-  display: block;
-  z-index: 8000;
-}
-.modal__title {
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 30px;
-}
-.modal__box {
-  position: relative;
-  text-align: center;
-  margin: 0 auto;
-  width: 350px;
-  padding: 25px 25px 30px;
-  margin-top: 150px;
-  background-color: #f8fafd;
-  border-radius: 5px;
-}
-.modal__box form a,
-.modal__box form input {
-  width: 100%;
-}
-.modal__box form input {
-  margin-bottom: 15px;
-}
-.modal__close {
-  position: absolute;
-  right: -43px;
-  top: -43px;
-  display: block;
-  width: 48px;
-  height: 48px;
-  background-image: url("../images/delete.png");
-  background-size: 48px 48px;
-  background-repeat: no-repeat;
-  cursor: pointer;
+.collapse.active .collapse__title.red:after {
+  border-bottom: 5px solid #f72c36;
+  border-top: 0;
 }
 .ui-slider-handle {
   outline: none !important;
@@ -583,7 +545,11 @@ body {
   background-image: none !important;
 }
 .time-data {
-  padding-bottom: 10px;
+  padding: 0 10px;
+  margin-bottom: 5px;
+}
+.time-data p {
+  margin-top: 0 !important;
 }
 #amount {
   background-color: transparent;
