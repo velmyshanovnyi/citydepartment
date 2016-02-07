@@ -7,6 +7,22 @@
 		<link href="css/main.css" type="text/css" rel="stylesheet">
 		<link href="fonts/stylesheet.css" type="text/css" rel="stylesheet">
 		<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.js"></script>
+        <script type="text/javascript">//<![CDATA[
+$(window).load(function(){
+$(".data-kinds .kinds li").click(function()
+{
+  $(".data-kinds .kinds li").removeClass("active");
+  $(this).toggleClass("active");
+});
+$("h2").click(function()
+{
+  $("h2").parent().removeClass("active");
+  $(this).parent().toggleClass("active");
+});
+});//]]> 
+
+</script>
 	</head>
 	<body  class="order-active">
 		<header class="header">
