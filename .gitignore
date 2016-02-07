@@ -44,3 +44,4 @@
 
 # Phpstorm's .idea
 .idea
+/nbproject/private/
