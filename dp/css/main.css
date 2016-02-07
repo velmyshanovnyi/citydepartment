@@ -100,7 +100,7 @@ body {
   display: block;
   float: left;
   background-image: url("../images/icons.png");
-  background-size: 120px 225px;
+  background-size: 120px 240px;
   padding-right: 5px;
   margin-top: 5px;
 }
@@ -146,13 +146,7 @@ body {
   width: 100%;
   height: 100%;
   padding-right: 260px;
-}
-.sidebar-order {
-  display: none;
-  inset: 9px 0px 72px 1px rgba(255,0,0,0.2);
-}
-.sidebar-order h2.collapse__title:after {
-  border-top: 5px solid #f72c36 !important;
+  padding-top: 40px;
 }
 .sidebar-order,
 .sidebar {
@@ -165,12 +159,22 @@ body {
   height: 100%;
   width: 260px;
 }
+.sidebar-order__close,
+.sidebar__close {
+  background-image: url("../images/icons.png");
+  background-size: 120px 240px;
+  background-position: -3px -221px;
+  width: 18px;
+  height: 18px;
+  float: right;
+  margin-top: -10px;
+}
 .sidebar-order__title,
 .sidebar__title {
   color: #f72c36;
   z-index: 10;
   position: relative;
-  font-size: 1.25em;
+  font-size: 1.2em;
 }
 .sidebar-order__content,
 .sidebar__content {
@@ -320,6 +324,18 @@ body {
   color: #f72c36;
   opacity: 0.7;
 }
+.sidebar-order {
+  display: none;
+  box-shadow: inset 9px 0px 72px 1px rgba(255,0,0,0.2);
+}
+.sidebar-order:before {
+  background-size: 260px 67px;
+  width: 260px;
+  height: 67px;
+}
+.sidebar-order h2.collapse__title:after {
+  border-top: 5px solid #f72c36;
+}
 .logo {
   position: absolute;
   top: 0;
@@ -333,7 +349,7 @@ body {
   background-repeat: no-repeat;
 }
 .logo__image {
-  width: 130px;
+  width: 150px;
 }
 .districts__items,
 .kinds__items {
@@ -401,7 +417,7 @@ body {
 .districts__item.active:before {
   content: "";
   background-image: url("../images/icons.png");
-  background-size: 120px 225px;
+  background-size: 120px 240px;
   background-position: -101px -4px;
   width: 20px;
   height: 20px;
@@ -431,7 +447,7 @@ body {
   top: 25px;
   right: 0;
   background-image: url("../images/icons.png");
-  background-size: 120px 225px;
+  background-size: 120px 240px;
   background-position: -98px -2px;
   width: 22px;
   height: 24px;
@@ -448,7 +464,7 @@ body {
   margin: 0 auto;
   display: block;
   background-image: url("../images/icons.png");
-  background-size: 120px 225px;
+  background-size: 120px 240px;
 }
 .kinds__image.drugs {
   background-position: -3px -27px;
@@ -460,7 +476,7 @@ body {
   background-position: -81px -27px;
 }
 .kinds__image.property {
-  background-position: -3px -67px;
+  background-position: -4px -67px;
 }
 .kinds__image.embezzlement {
   background-position: -43px -67px;
@@ -469,7 +485,7 @@ body {
   background-position: -83px -67px;
 }
 .kinds__image.extortion {
-  background-position: -3px -107px;
+  background-position: -4px -108px;
 }
 .kinds__image.rape {
   background-position: -43px -107px;
@@ -484,7 +500,7 @@ body {
   background-position: -83px -147px;
 }
 .kinds__image.police {
-  background-position: -44px -147px;
+  background-position: -45px -147px;
 }
 .data-kinds__items {
   color: #f72c36;
@@ -515,53 +531,13 @@ body {
 .collapse.active .collapse__content {
   height: auto;
 }
-.modal {
-  display: none;
-  background-color: rgba(59,63,69,0.8);
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  position: fixed;
-  top: 0;
-  left: 0;
+.collapse.active .collapse__title:after {
+  border-bottom: 5px solid #fff;
+  border-top: 0;
 }
-.modal.active {
-  display: block;
-  z-index: 8000;
-}
-.modal__title {
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 30px;
-}
-.modal__box {
-  position: relative;
-  text-align: center;
-  margin: 0 auto;
-  width: 350px;
-  padding: 25px 25px 30px;
-  margin-top: 150px;
-  background-color: #f8fafd;
-  border-radius: 5px;
-}
-.modal__box form a,
-.modal__box form input {
-  width: 100%;
-}
-.modal__box form input {
-  margin-bottom: 15px;
-}
-.modal__close {
-  position: absolute;
-  right: -43px;
-  top: -43px;
-  display: block;
-  width: 48px;
-  height: 48px;
-  background-image: url("../images/delete.png");
-  background-size: 48px 48px;
-  background-repeat: no-repeat;
-  cursor: pointer;
+.collapse.active .collapse__title.red:after {
+  border-bottom: 5px solid #f72c36;
+  border-top: 0;
 }
 .ui-slider-handle {
   outline: none !important;
@@ -569,7 +545,11 @@ body {
   background-image: none !important;
 }
 .time-data {
-  padding-bottom: 10px;
+  padding: 0 10px;
+  margin-bottom: 5px;
+}
+.time-data p {
+  margin-top: 0 !important;
 }
 #amount {
   background-color: transparent;
