@@ -47,6 +47,10 @@ body {
   font-weight: normal;
   font-size: 1em;
 }
+.text-center {
+  text-align: center;
+  margin: 0;
+}
 .sr-only {
   position: absolute;
   width: 1px;
@@ -349,7 +353,8 @@ body {
   background-repeat: no-repeat;
 }
 .logo__image {
-  width: 150px;
+  width: 137px;
+  margin-top: -4px;
 }
 .districts__items,
 .kinds__items {
