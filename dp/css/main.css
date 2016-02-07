@@ -100,7 +100,7 @@ body {
   display: block;
   float: left;
   background-image: url("../images/icons.png");
-  background-size: 120px 225px;
+  background-size: 120px 240px;
   padding-right: 5px;
   margin-top: 5px;
 }
@@ -147,13 +147,6 @@ body {
   height: 100%;
   padding-right: 260px;
 }
-.sidebar-order {
-  display: none;
-  inset: 9px 0px 72px 1px rgba(255,0,0,0.2);
-}
-.sidebar-order h2.collapse__title:after {
-  border-top: 5px solid #f72c36 !important;
-}
 .sidebar-order,
 .sidebar {
   z-index: 2;
@@ -170,7 +163,7 @@ body {
   color: #f72c36;
   z-index: 10;
   position: relative;
-  font-size: 1.25em;
+  font-size: 1.2em;
 }
 .sidebar-order__content,
 .sidebar__content {
@@ -320,6 +313,18 @@ body {
   color: #f72c36;
   opacity: 0.7;
 }
+.sidebar-order {
+  display: none;
+  inset: 9px 0px 72px 1px rgba(255,0,0,0.2);
+}
+.sidebar-order:before {
+  background-size: 260px 67px;
+  width: 260px;
+  height: 67px;
+}
+.sidebar-order h2.collapse__title:after {
+  border-top: 5px solid #f72c36 !important;
+}
 .logo {
   position: absolute;
   top: 0;
@@ -401,7 +406,7 @@ body {
 .districts__item.active:before {
   content: "";
   background-image: url("../images/icons.png");
-  background-size: 120px 225px;
+  background-size: 120px 240px;
   background-position: -101px -4px;
   width: 20px;
   height: 20px;
@@ -431,7 +436,7 @@ body {
   top: 25px;
   right: 0;
   background-image: url("../images/icons.png");
-  background-size: 120px 225px;
+  background-size: 120px 240px;
   background-position: -98px -2px;
   width: 22px;
   height: 24px;
@@ -448,7 +453,7 @@ body {
   margin: 0 auto;
   display: block;
   background-image: url("../images/icons.png");
-  background-size: 120px 225px;
+  background-size: 120px 240px;
 }
 .kinds__image.drugs {
   background-position: -3px -27px;
