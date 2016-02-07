@@ -353,7 +353,8 @@ body {
   background-repeat: no-repeat;
 }
 .logo__image {
-  width: 150px;
+  width: 137px;
+  margin-top: -4px;
 }
 .districts__items,
 .kinds__items {
