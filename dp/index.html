@@ -157,14 +157,22 @@ $(".sidebar__button-order.button_shadow").click(function()
 						</ul>
 					</div>
 				</div>
-				<div class="collapse active">
+				<div class="collapse">
 					<h2 class="collapse__title">4. Вибiр часу:</h2>
-					<div class="collapse__content time-data">
+					<!-- <div class="collapse__content time-data">
 						<p>
 							<input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
 						</p>
 						<div id="slider-range"></div>
+					</div> -->
+					<div class="collapse__content time">
+						<input class="time-day" placeholder="7" type="text">
+						<label>:</label>
+						<input class="time-month" placeholder="02" type="text">
+						<label>:</label>
+						<input class="time-year" placeholder="2016" type="text">
 					</div>
+					
 				</div>
 				<button class="sidebar__button-search"></button>
 			</div>
@@ -238,14 +246,12 @@ $(".sidebar__button-order.button_shadow").click(function()
 								<p class="kinds__title">Розбiй</p>
 							</li>
 						</ul>
+						<div class="">
+							<input class="user-order__time" type="text"placeholder="12:20">
+							<input class="user-order__date" type="text" placeholder="23.11.2015">
+						</div>
+						<textarea placeholder="Розкажiть про подiю"></textarea>
 					</div>
-					
-					<p class="data-kinds__items">Обрано: Грабiж, Розбiй</p>
-					<div class="">
-						<input class="user-order__time" type="text"placeholder="12:20">
-						<input class="user-order__date" type="text" placeholder="23.11.2015">
-					</div>
-					<textarea placeholder="Розкажiть про подiю"></textarea>
 				</div>
 				<div class="user-order collapse">
 					<h2 class="red collapse__title">2. Контактнi данi:</h2>
