@@ -9,6 +9,7 @@ body
 	background-color #fff
 	margin 0
 	height 100%
+	overflow hidden
 	.order-active
 		&:before
 			content ""
@@ -26,7 +27,21 @@ body
 			display block
 			&:before
 				background-image url(../images/darck-bg-shadow.png)
-			
+::-webkit-input-placeholder
+	font-family mainFont
+	font-size 0.8em 
+	color #f72c36 !important
+	line-height 1.5em
+:-moz-placeholder
+	font-family mainFont
+	font-size 0.8em 
+	color #f72c36 !important
+	line-height 1.5em
+:-ms-input-placeholder
+	font-family mainFont
+	font-size 0.8em  
+	color #f72c36 !important
+	line-height 1.5em			
 body
 	font-family mainFont
 	font-weight normal
@@ -45,6 +60,8 @@ body
 	color #1ca0fd
 .yellow
 	color #ffd824
+.red
+	color #f72c36
 .header
 	text-align center
 	height 40px
@@ -119,9 +136,13 @@ body
 	padding-right 260px
 .sidebar-order
 	display none
+	inset 9px 0px 72px 1px rgba(255,0,0,0.2)
+	h2
+		&.collapse__title
+			&:after
+				border-top 5px solid #f72c36 !important
 .sidebar-order
 .sidebar
-	overflow scroll
 	z-index 2
 	text-align center
 	background-color #171717
@@ -137,15 +158,27 @@ body
 		font-size 1.25em
 	&__content
 		overflow-y auto
-		margin-top 20px
-		padding 0 20px 0 15px
+		padding 20px 10px 0 15px
 		color #fff
 		text-align left
 		h2
-			font-size 1em
+			font-size 0.9em
 			margin 10px 0
 			position relative
 			z-index 5
+			position relative
+			cursor pointer
+			&.collapse__title
+				&:after
+					content ""
+					display inline-block
+					vertical-align middle
+					width 0
+					height 0
+					margin-left 5px
+					border-left 5px solid transparent
+					border-right 5px solid transparent
+					border-top 5px solid #fff		
 	&:before
 		content ""
 		position absolute
@@ -157,7 +190,7 @@ body
 		height 70px
 	&__button
 		&-order
-			background-image url(../images/button.png)
+			background-image url(../images/button.jpg)
 			background-repeat no-repeat
 			background-color transparent
 			border 0 none
@@ -170,6 +203,10 @@ body
 			margin-top 5px
 			cursor pointer
 			outline none
+			&.button_shadow
+				background-image url(../images/button.png)
+				margin 15px auto 0
+				display block
 		&-search
 			background-image url(../images/search-button.jpg)
 			background-repeat no-repeat
@@ -182,19 +219,66 @@ body
 			cursor pointer
 			outline none
 			margin 10px auto 30px
+	textarea
+		resize none
+		min-height 60px
+		font-size 0.8em
+	textarea
+	input
+		border 0 none
+		border-left 1px solid #f72c36
+		background-color transparent
+		width 100%
+		padding 0 0 0 10px
+		outline none
+		color #f72c36 !important
+		cursor pointer
+	input
+		border 0 none
+		text-align center
+	.user-order
+		text-align center
+		h2
+			text-align left
+		&__adress
+			display inline-block
+			padding-bottom 3px
+			margin-bottom 5px
+			border-bottom 1px solid #f72c36
+		&__lastname
+		&__adress
+			font-size 1.2em
+			margin-bottom 5px
+		&__name 
+			font-size 0.9em
+		&__phone
+			font-style italic
+			font-size 1em
+			margin 5px 0 5px
+		&__time
+			font-size 2em
+			max-height 45px
+		&__date
+			font-size 1em
+			margin-bottom 5px
+		label
+			display inline-block
+			font-size 0.7em
+			color #f72c36
+			opacity 0.7
 .logo
 	position absolute
 	top 0
 	left 50%
-	margin 0 0 0 -230px
-	width 350px
+	margin 0 0 0 -125px
+	width 250px
 	display inline-block
 	text-align center
 	background-image url(../images/logo-bg.png)
-	background-size 350px 110px
+	background-size 250px 65px
 	background-repeat no-repeat
 	&__image
-		width 230px
+		width 130px
 .districts
 .kinds
 	&__items
@@ -214,6 +298,7 @@ body
 		padding 0
 		width 100%
 		height 100%
+		overflow hidden
 	img 
 		width 225px
 		margin-top -30px
@@ -265,7 +350,7 @@ body
 			width 40%
 	&__item
 		position relative
-		width 23%
+		width 22%
 		display inline-block
 		vertical-align top
 		font-size 9px
@@ -319,7 +404,10 @@ body
 			background-position -83px -147px
 		&.police
 			background-position -44px -147px
-.data-event
+.data-kinds
+	&__items 
+		color #f72c36
+		font-size 0.8em
 	.kinds 
 		&__image-box
 			width 38px
@@ -332,19 +420,75 @@ body
 			.kinds 
 				&__image
 					margin -2px
+		&__title 
+			color #f72c36
 		&__item
 			&.active
 				&:before
 					background-position -98px -202px
-
-
-
-
-
-
-
-	
-
-
-
-
+.collapse
+	&__content
+		height 0
+		overflow hidden
+	&.active
+		.collapse
+			&__content
+				height auto
+.modal
+	display none
+	background-color rgba(59, 63, 69, .8)
+	width 100%
+	height 100%
+	z-index 10
+	position fixed
+	top 0
+	left 0
+	&.active
+		display block
+		z-index 8000
+	&__title
+		font-size 22px
+		font-weight 600
+		margin-bottom 30px
+	&__box
+		position relative
+		text-align center
+		margin 0 auto
+		width 350px
+		padding 25px 25px 30px
+		margin-top 150px
+		background-color #f8fafd
+		border-radius 5px
+		form
+			a
+			input
+				width 100%
+			input
+				margin-bottom 15px
+	&__close
+		position absolute
+		right -43px
+		top -43px
+		display block
+		width 48px
+		height 48px
+		background-image url("../images/delete.png")
+		background-size 48px 48px
+		background-repeat no-repeat
+		cursor pointer
+// time slider 
+.ui-slider-handle
+	outline none !important
+	background-color #ED5555 !important
+	background-image none !important
+.time-data
+	padding-bottom 10px
+#amount
+	background-color transparent
+	font-size 1em
+	text-align left
+.ui-slider-range
+	background-color #ED5555 !important
+	background-image none !important
+.ui-slider-horizontal
+	height 0.6em
