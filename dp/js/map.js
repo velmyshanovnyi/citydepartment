@@ -74,6 +74,7 @@ $("#category-list").on("click", ".js-input", function () {
     if ($this.hasClass("active")) {
         $this.removeClass("active");
         categoryClasters[id].objects.removeAll();
+        map.container.fitToViewport();
     } else {
         $this.addClass("active");
         $.get('http://definerak.pythonanywhere.com/' + id, function (json) {
