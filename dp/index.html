@@ -15,16 +15,33 @@ $(".data-kinds .kinds li").click(function()
   $(".data-kinds .kinds li").removeClass("active");
   $(this).toggleClass("active");
 });
-$("h2").click(function()
+$(".sidebar .collapse h2").click(function()
 {
-  $("h2").parent().removeClass("active");
+  $(".sidebar .collapse h2").parent().removeClass("active");
   $(this).parent().toggleClass("active");
+});
+$(".sidebar-order .collapse h2").click(function()
+{
+  $(".sidebar-order .collapse h2").parent().removeClass("active");
+  $(this).parent().toggleClass("active");
+});
+$(".districts__list li").click(function()
+{
+  $(this).toggleClass("active");
+});
+$(".sidebar__close").click(function()
+{
+  $("body").removeClass("order-active");
+});
+$(".sidebar__button-order").click(function()
+{
+  $("body").addClass("order-active");
 });
 });//]]> 
 
 </script>
 	</head>
-	<body  class="order-active">
+	<body>
 		<header class="header">
 			<a class="header__lang" href=""><span class="blue">U</span><span class="yellow">A</span></a>
 			<ul class="menu">
@@ -192,7 +209,7 @@ $("h2").click(function()
 								</div>
 								<p class="kinds__title">Крадiжка</p>
 							</li>
-							<li class="kinds__item">
+							<li class="kinds__item active">
 								<div class="kinds__image-box">
 									<div class="kinds__image extortion"></div>
 								</div>
@@ -218,7 +235,9 @@ $("h2").click(function()
 							</li>
 						</ul>
 					</div>
-					<div class="order__time">
+					
+					<p class="data-kinds__items">Обрано: Грабiж, Розбiй</p>
+					<div class="">
 						<input class="user-order__time" type="text"placeholder="12:20">
 						<input class="user-order__date" type="text" placeholder="23.11.2015">
 					</div>
