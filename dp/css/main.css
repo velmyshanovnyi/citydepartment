@@ -158,6 +158,15 @@ body {
   height: 100%;
   width: 260px;
 }
+.sidebar-order__close,
+.sidebar__close {
+  background-image: url("../images/icons.png");
+  background-size: 120px 240px;
+  background-position: -3px -221px;
+  width: 18px;
+  height: 18px;
+  float: right;
+}
 .sidebar-order__title,
 .sidebar__title {
   color: #f72c36;
@@ -465,7 +474,7 @@ body {
   background-position: -81px -27px;
 }
 .kinds__image.property {
-  background-position: -3px -67px;
+  background-position: -4px -67px;
 }
 .kinds__image.embezzlement {
   background-position: -43px -67px;
@@ -474,7 +483,7 @@ body {
   background-position: -83px -67px;
 }
 .kinds__image.extortion {
-  background-position: -3px -107px;
+  background-position: -4px -108px;
 }
 .kinds__image.rape {
   background-position: -43px -107px;
@@ -489,7 +498,7 @@ body {
   background-position: -83px -147px;
 }
 .kinds__image.police {
-  background-position: -44px -147px;
+  background-position: -45px -147px;
 }
 .data-kinds__items {
   color: #f72c36;
