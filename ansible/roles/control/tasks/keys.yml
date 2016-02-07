@@ -1,6 +1,0 @@
----
-- name: Add private key from host machine
-  copy: src=~/.ssh/id_rsa dest=.ssh/id_rsa mode=0600
-
-- name: Add public key from host machine
-  copy: src=~/.ssh/id_rsa.pub dest=.ssh/id_rsa.pub mode=0600

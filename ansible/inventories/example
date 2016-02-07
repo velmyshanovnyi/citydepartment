@@ -1,9 +1,0 @@
-[web]
-example.com
-
-[db]
-example.com
-
-[example:children]
-web
-db

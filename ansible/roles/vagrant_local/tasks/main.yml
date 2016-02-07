@@ -1,4 +1,0 @@
----
-
-- include: development.yml
-  when: app.env == 'dev'

@@ -1,5 +1,0 @@
----
-- include: software.yml
-  become: true
-
-- include: keys.yml
