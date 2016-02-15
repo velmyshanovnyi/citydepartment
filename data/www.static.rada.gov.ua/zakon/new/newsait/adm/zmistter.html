@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistter.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+       <meta http-equiv="X-UA-Compatible" content="IE=8"> 
+
+    <title>Офіційний портал Верховної Ради України</title>
+    
+    <link rel="stylesheet" type="text/css" href="./zmistter_files/style.css">
+    <link rel="stylesheet" type="text/css" href="./zmistter_files/jNice.css">
+    <link rel="stylesheet" type="text/css" href="./zmistter_files/jquery-ui-1.8.18.custom.css">
+    
+    <link rel="stylesheet" type="text/css" href="./zmistter_files/skin.css">
+    
+        <script type="text/javascript" src="./zmistter_files/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="./zmistter_files/jquery.jNice.js"></script> 
+     
+    <script type="text/javascript" src="./zmistter_files/jquery-ui.js"></script> 
+    <script type="text/javascript" src="./zmistter_files/cufon-yui.js"></script><style type="text/css">cufon{text-indent:0!important;}@media screen,projection{cufon{display:inline!important;display:inline-block!important;position:relative!important;vertical-align:middle!important;font-size:1px!important;line-height:1px!important;}cufon cufontext{display:-moz-inline-box!important;display:inline-block!important;width:0!important;height:0!important;overflow:hidden!important;text-indent:-10000in!important;}cufon canvas{position:relative!important;}}@media print{cufon{padding:0!important;}cufon canvas{display:none!important;}}</style>
+    <script type="text/javascript" src="./zmistter_files/Helvetica-L_400.font.js"></script>
+    <script type="text/javascript" src="./zmistter_files/cufon-settings.js"></script>
+    <script type="text/javascript" src="./zmistter_files/jquery.cycle.all.js"></script> 
+    <script type="text/javascript" src="./zmistter_files/jquery.jcarousel.min.js"></script> 
+    
+               
+        <script type="text/javascript" src="./zmistter_files/jquery.ui.datepicker-uk.js"></script>     
+        
+    <!-- jScrollPane -->
+        <link type="text/css" href="./zmistter_files/jquery.jscrollpane.css" rel="stylesheet" media="all">
+        <script type="text/javascript" src="./zmistter_files/jquery.jscrollpane.min.js"></script>    
+        <script type="text/javascript" src="./zmistter_files/jquery.mousewheel.js"></script>
+    <!-- end jScrollPane -->
+
+    <!--[if !IE 9]>
+    	<link rel="stylesheet" href="http://iportal.rada.gov.ua/sources/default/main_page/css/ie.css" type="text/css" media="screen" />
+    <![endif]-->
+        
+    
+        
+	<script>
+                    
+		$(document).ready(function() {
+			$( ".tabs_block" ).tabs();
+			$( ".multimedia .tabs_block" ).tabs("option", "selected", 1);
+                        $( ".multimedia .tabs_block" ).bind( "tabsselect", function(event, ui) {
+                              $('#media_show').attr('href', $(".multimedia .tabs_block .multimedia_tab:eq("+ui.index+")").attr('url_show'));
+                        });                            
+                            
+                            
+			$('.cycle').cycle({
+				fx:     'fade', 
+				pager:  '#cycle_pager'
+			});
+			$('#mycarousel').jcarousel({
+				
+			});
+			$('.archive_date').datepicker({
+                                onClose:function(){
+                                       $(this).parent().removeClass('active');
+                                },
+				beforeShow: function(input, inst){
+                                        inst.dpDiv.css({marginTop: -input.offsetHeight + 20 + 'px', marginLeft: input.offsetWidth - 185 + 'px'});
+                                        $(this).parent().addClass('active');
+                                },
+                                onSelect: function(dateText, inst) {
+                                    document.location.href = '/archive/' + dateText;
+                                }    
+                                    
+                                    
+			});
+                            
+                            
+                        /*--------------------------------  Menu navigation   */   
+                        $('#nav a.root').click(function(){
+                             var li = $(this).parents('li');                                
+                             li.children('.submenu').hide();
+                                
+                            var leftposition = li.position();
+                            $('#nav li').removeClass('active');
+                            li.addClass('active');
+                            li.children('.submenu').show();
+                                if (leftposition.left > 0) 
+                                li.children('.submenu').css('margin-left', -leftposition.left - 1 + 'px');
+                            return false;                                
+
+                        });
+                        /* TimeOur ID */
+                            
+                            var TimeOutId; 
+                            
+                        
+                        $('#nav').mouseleave(function(){
+                            var NavLi = $(this).children('.submenu');
+                            TimeOutId = setTimeout(function(){NavLi.hide();
+                             $('#nav li').removeClass('active');},400);
+                                
+                        });
+                         $('#nav').mouseenter(function(){
+                            clearTimeout(TimeOutId);
+                          });
+                 /*--------------------------------------------------------------------  */ 
+			$('.announce_overflow').jScrollPane({showArrows: true});
+		});                    
+                    
+	</script>
+        
+</head>
+<body>
+<div id="page">
+	<!-- header -->
+    <div id="header">
+    	<!-- lang block -->
+    	<div class="lang_block">
+        	<ul class="lang_menu">
+                                            
+                                                    <li class="active">Укр</li>
+                                                                    
+                                                                                                                       
+                                                                                                                                
+                </ul>
+        	<ul class="map_menu">
+                    <li><a href="http://iportal.rada.gov.ua/rss/news">RSS</a></li>
+                                 <li><a href="http://iportal.rada.gov.ua/archive/">архiв</a></li>
+                    <li><a href="http://iportal.rada.gov.ua/map/">мапа сайту</a></li>
+                </ul>                
+
+        </div>
+    	<!-- end lang block -->
+        
+        <!-- main header -->
+        <div class="header_body">
+        	<div class="logo">
+            	<a href="http://iportal.rada.gov.ua/">
+      		   
+			
+			    
+			    </a>
+		
+		
+			 
+		
+		</div>
+		    
+	       
+	 	 
+        	<div class="search_block">
+                    
+                <form method="get" action="http://iportal.rada.gov.ua//search_out">
+                    <input type="submit" class="search_button" value="Пошук" name="search"><input type="text" class="search_input" name="submit">
+                </form>                 
+
+                <a class="wide_search" href="http://iportal.rada.gov.ua//search/">розширений пошук</a>
+            </div>
+        </div>
+        <!-- end main header -->
+<!--	192.168.114.31	-->
+        <!-- menu -->
+	
+        <div id="nav"> 
+ 
+	    
+		    
+                <!--TOP MENU cut -->
+<ul>
+    <li class="first">
+        <a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistter.html#" class="root">Головна</a>
+        <div class="submenu">
+            <div class="submenu_col">
+                <h3>Склад і структура</h3>
+                <ul>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/site2/p_head_vru">Голова Верховної Ради України</a></li>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/site2/p_kerivnyky_vru">Керівництво Верховної Ради України</a></li>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/site2/p_deputat_list">Народні депутати України</a></li>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/site2/p_fractions">Депутатські фракції</a></li>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/radan_gs09/ns_zal_frack">Схема розміщення депутатських фракцій і груп у сесійній залі</a></li>
+
+
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/site2/p_komitis">Комітети Верховної Ради України</a></li>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/site2/p_temp_komitis">Тимчасові комісії</a></li>
+                                        <li><a href="http://w1.c1.rada.gov.ua/pls/site2/p_aparat">Апарат Верховної Ради України</a></li>
+                </ul>
+            </div>
+            <div class="submenu_col">
+                <h3>Архів за скликаннями</h3>
+                <p>6 скликання (2007-2012)</p>
+                <ul>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/site2/p_deputat_list?skl=7">Народні депутати</a></li>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/radan_gs09/ns_arh_h1?nom_skl=6">Хронологія розгляду</a></li>
+                                    </ul>
+                <p>5 скликання (2006-2007)</p>
+                <ul>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/site2/p_deputat_list?skl=6">Народні депутати</a></li>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/radan_gs09/ns_arh_h1?nom_skl=5">Хронологія розгляду</a></li>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/site2/p_authorities?skl=7">Органи Верховної Ради України</a></li>
+                    <li><a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/fsview/45949.html">Правова база діяльності</a></li>
+                </ul>
+                <p>4 скликання (2002-2006)</p>
+                <ul>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/site2/p_deputat_list?skl=5">Народні депутати</a></li>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/radan_gs09/ns_arh_h1?nom_skl=4">Хронологія розгляду</a></li>
+                </ul>
+                <p>3 скликання (1998-2002)</p>
+                <ul>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/radan_gs09/d_index_arh?skl=3">Народні депутати</a></li>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/radan_gs09/ns_arh_h1?nom_skl=3">Хронологія розгляду</a></li>
+                </ul>
+                <p>2 скликання (1994-1998)</p>
+                <ul>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/radan_gs09/d_index_arh?skl=2">Народні депутати</a></li>
+                </ul>
+                <p>1 скликання (1990-1994)</p>
+                <ul>
+                    <li><a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/DEPUTAT1/spisok1.htm">Народні депутати</a></li>
+                </ul>
+            </div>
+            <div class="submenu_col">
+                <h3>Парламентаризм в Україні</h3>
+                <ul>
+                    <li><a href="http://iportal.rada.gov.ua/documents/parliamentarism/45945.html">Становлення української державності</a></li>
+                    <li><a href="http://static.rada.gov.ua/NEWSAJT/site/const/index.html">Конституційний процес в Україні</a></li>
+                                    </ul>
+            </div>
+        </div>
+    </li>
+    <li>
+        <a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistter.html#" class="root">Законотворчість</a>
+        <div class="submenu">
+            <div class="submenu_col">
+                <h3>Законопроекти</h3>
+                <ul>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/zweb2/webproc2">Пошук за реквізитами</a></li>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/zweb2/webproc555">Зареєстровані за поточний тиждень</a></li>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/zweb2/pkg_zpsended.by_date">Надано народним депутатам</a></li>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/zweb2/webproc3_current">Знаходяться на розгляді в комітетах</a></li>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/site2/p_bills_stand_laws">Прийняті на поточній сесії</a></li>
+                </ul>
+            </div>
+            <div class="submenu_col">
+                <h3>Пленарні засідання</h3>
+                <p>Планування та порядок розгляду питань</p>
+                <ul>
+                    <li><a target="_blank" href="http://iportal.rada.gov.ua/meeting/awt">Календарний план проведення сесії</a></li>
+                    <li><a href="http://static.rada.gov.ua/zakon/new/WR/pd_index.html">Порядок денний сесії</a></li>
+                    <li><a href="http://static.rada.gov.ua/zakon/new/WR/index.htm">Розклад пленарних засідань</a></li>
+                    <li><a href="http://iportal.rada.gov.ua/meeting/awt">Порядки денні пленарних засідань</a></li>
+                    <li><a href="http://static.rada.gov.ua/zakon/new/RK/index.htm">Тижневі графіки засідань комітетів</a></li>
+                </ul>
+                <p>Розгляд питань порядку денного</p>
+                <ul>
+                    <li><a href="http://iportal.rada.gov.ua/news/hpz">Хід пленарних засідань</a></li>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/radan_gs09/ns_h1">Хронологія розгляду</a></li>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/radan_gs09/ns_pd1">Результати розгляду</a></li>
+                    <li><a href="http://iportal.rada.gov.ua/meeting/faxiv">Оперативна інформація</a></li>
+                    <li><a href="http://iportal.rada.gov.ua/meeting/stenogr">Стенограми пленарних засідань</a></li>
+                </ul>
+            </div>
+            <div class="submenu_col">
+                <h3>Парламентські слухання</h3>
+                <ul>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/site2/p_par_sl">Проведення парламентських слухань</a></li>
+                    <li><a href="http://static.rada.gov.ua/zakon/new/par_sl/index.htm">Хроніка парламентських слухань</a></li>
+                </ul>
+            </div>
+        </div>
+    </li>
+    <li>
+        <a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistter.html#" class="root">Законодавство</a>
+        <div class="submenu">
+            <div class="submenu_col">
+                <h3>Нормативно-правова база України</h3>
+                <ul>
+                    <li><a href="http://zakon.rada.gov.ua/go">Законодавство України</a></li>
+                    <li><a href="http://zakon.rada.gov.ua/go/a#Find">Пошук за реквізитами</a></li>
+                    <li><a href="http://zakon.rada.gov.ua/go/nn">Надходження законодавства</a></li>
+                    <li><a href="http://zakon.rada.gov.ua/go/c">Міжнародні документи</a></li>
+                    <li><a href="http://zakon.rada.gov.ua/go/d">Популярні документи</a></li>
+                    <li><a href="http://zakon.rada.gov.ua/go/perv">Первинні законодавчі акти</a></li>
+                    <li><a href="http://zakon.rada.gov.ua/go/koms">Розподіл за комітетами ВР</a></li>
+                    <li><a href="http://zakon.rada.gov.ua/go/annot">Анотації англійською мовою</a></li>
+                    <li><a href="http://zakon.rada.gov.ua/go/krym">Законодавство АР Крим</a></li>
+                                    </ul>
+            </div>
+            <div class="submenu_col">
+                <h3>Правова база діяльності Парламенту</h3>
+                <ul>
+                    <li><a href="http://zakon.rada.gov.ua/go/254%D0%BA/96-%D0%B2%D1%80">Конституція України</a></li>
+                    <li><a href="http://zakon.rada.gov.ua/go/1861-17">Закон "Про Регламент Верховної Ради України"</a></li>
+                    <li><a href="http://zakon.rada.gov.ua/go/2790-12">Закон "Про статус народного депутата України</a></li>
+                    <li><a href="http://zakon.rada.gov.ua/go/116/95-%E2%F0">Закон "Про комітети Верховної Ради України</a></li>
+                    <li><a href="http://zakon.rada.gov.ua/go/769/11-%D1%80%D0%B3">Положення про Апарат Верховної Ради України</a></li>
+                    <li><a href="http://zakon.rada.gov.ua/go/pravbase">Усі нормативні документи</a></li>
+                </ul>
+            </div>
+        </div>
+    </li>
+    <li>
+        <a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistter.html#" class="root">Міжнародна діяльність</a>
+        <div class="submenu">
+            <div class="submenu_col">
+                <ul>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/mpz2/organizations.mpo_s">Міжнародні парламентські організації</a></li>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/mpz2/parlaments.list">Парламенти зарубіжних країн</a></li>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/mpz2/organizations.perm_delegations">Постійні делегації Верховної Ради України</a></li>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/mpz2/organizations.dep_groups">Депутатські групи з міжпарламентських зв'язків із зарубіжними країнами</a></li>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/mpz2/organizations.asambleas">Міжпарламентські асамблеї</a></li>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/mpz2/organizations.inter_commissions">Спільні міжпарламентські комісії</a></li>
+                    <li><a href="http://pdp.org.ua/">Програма сприяння парламенту України університету Індіани</a></li>
+                    <li><a href="http://iportal.rada.gov.ua/fsview/46041.html">Вестмінстерська Фундація за демократію</a></li>
+                </ul>
+            </div>
+        </div>
+    </li>
+    <li>
+        <a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistter.html#" class="root">Інформація</a>
+        <div class="submenu">
+            <div class="submenu_col">
+                <h3>Довідкова інформація</h3>
+                <ul>
+                    <li><a href="http://iportal.rada.gov.ua/news/Novyny/Parlamentskyj_dovidnyk_znamennykh_i_pamyatnykh_dat/">Довідник знаменних і пам'ятних дат ВР України</a></li>
+                    <li><a href="http://iportal.rada.gov.ua/news/Poryadok_akredytatsiji,_Polozhennya_pro_ekskursiji/">Порядок акредитації, Положення про екскурсії</a></li>
+                                    </ul>
+                <p>Господарсько-фінансова діяльність</p> 
+                <ul>
+                    <li><a href="http://iportal.rada.gov.ua/documents/gosp_fin_dij_doc/plan_dij_doc/67854.html">Плани</a></li>
+                    <li><a href="http://iportal.rada.gov.ua/documents/der_zak/73613.html">Звіти</a></li>
+                    <li><a href="http://iportal.rada.gov.ua/documents/gosp_fin_dij_doc/der_zak/">Державні закупівлі</a></li>
+
+                </ul>
+            </div>
+            <div class="submenu_col">
+                <h3>Запити на інформацію</h3>
+                <p>Довідки з питань доступу до публічної інформації</p>
+                <ul>
+                    <li><a href="http://iportal.rada.gov.ua/documents/dostpubinfo/45915.html">Документи якими керується Апарат ВР України у питаннях доступу до публічної інформації</a></li>
+                    <li><a href="http://iportal.rada.gov.ua/documents/dostpubinfo/45916.html">Види інформації, якою володіє Апарат ВР України</a></li>
+                    <li><a href="http://iportal.rada.gov.ua/documents/dostpubinfo/zvity_pubinf/">Звіти</a></li>
+                </ul>
+                <p>Форми доступу до публічної інформації</p>
+                <ul>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/site2/pkg_public_info.request_form">Електронна форма запиту</a></li>
+                    <li><a href="http://static.rada.gov.ua/site/ukr/pubinf/info_req_blank.pdf">Паперова форма запиту</a></li>
+                </ul>
+            </div>
+        </div>
+    </li>
+    <li>
+        <a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistter.html#" class="root">Контакти</a>
+        <div class="submenu">
+                        <div class="submenu_col">
+                <h3>Запити громадян</h3>
+                <ul>
+                    <li><a href="http://vzvernen.rada.gov.ua/vzvernen/control/uk/index">Відділ з питань звернень громадян</a></li>
+                </ul>
+            </div>
+        </div>
+    </li>
+    <li>
+        <a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistter.html#" class="root">Ресурси</a>
+        <div class="submenu">
+            <div class="submenu_col">
+                <h3>Україна. Адмін.тер.устрій</h3>
+                <ul>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/z7503/a002">Статистика</a></li>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/z7503/zv.cf1">Пошук за реквізитами</a></li>
+                </ul>
+                <p>
+                    Довідники
+                </p>
+                <ul>
+                    <li><a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmist.html">Адміністративно-територіальний устрій</a></li>
+                    <li><a href="http://static.rada.gov.ua/site/ukr/atuu/dovidnyk/tel_dovidnyk_rad.pdf">Телефони керівників місцевих рад</a></li>
+                    <li><a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/dov/zmist.html">Довідник телефонів та поштових адрес Верховної Ради Автономної Республіки Крим та місцевих рад</a></li>
+                </ul>
+                <p> Нормативно-правові акти з питань адміністративно-територіального устрою України</p>
+                <ul>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/z7503/A035">Пошук по областях</a></li>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/z7503/a034">Пошук по роках</a></li>
+                </ul>
+                <p>
+                    Місцеві вибори
+                </p>
+                <ul>
+                    <li><a href="http://iportal.rada.gov.ua/fsview/46076.html">Місцеві вибори 2010</a></li>
+                    <li><a href="http://iportal.rada.gov.ua/fsview/46086.html">Позачергові місцеві вибори</a></li>
+                </ul>
+            </div>
+            <div class="submenu_col">
+                <h3>Інформаційні ресурси</h3>
+                <p>
+                    Інформаційні ресурси Верховної Ради України
+                </p>
+                <ul>
+                    <li><a href="http://chairman.rada.gov.ua/">Веб-сайт Голови Верховної Ради України</a></li>
+                    <li><a href="http://w1.c1.rada.gov.ua/pls/site2/p_komitis_site">Веб-сайти комітетів Верховної Ради України</a></li>
+                                        <li><a href="http://lib.rada.gov.ua/">Бібліотечно-бібліографічні ресурси</a></li>
+                    <li><a href="http://iportal.rada.gov.ua//documents">Електронний архів документів</a></li>
+                    <li><a href="http://instzak.rada.gov.ua/">Інститут законодавства Верховної Ради України</a></li>
+                    <li><a href="http://euinfocentre.rada.gov.ua/">Європейський центр інформаційної підтримки Верховної Ради України</a>
+                    </li>
+                    <li><a href="http://tv.rada.gov.ua/">Дирекція телерадіопрограм Верховної Ради України </a></li>
+                </ul>
+                <p>
+                    Зовнішні інформаційні ресурси
+                </p>
+                <ul>
+                    <li><a href="http://www.golos.com.ua/">Газета Верховної Ради "Голос України"</a></li>
+                    <li><a href="http://www.viche.info/">Журнал "Віче"</a></li>
+                    <li><a href="http://www.nardep.com/">Депутатський клуб "Парламент" та журнал "Народний депутат"</a></li>
+                </ul>
+            </div>
+            <div class="submenu_col">
+                <h3>Веб-сайти органів держ. влади</h3>
+                <ul>
+                    <li><a href="http://www.president.gov.ua/">Президент України</a></li>
+                </ul>
+                <p>
+                    Виконавча влада
+                </p>
+                <ul>
+                    <li><a href="http://www.kmu.gov.ua/">Кабінет Міністрів України</a></li>
+                </ul>
+                <p>
+                    Судова влада
+                </p>
+                <ul>
+                    <li><a href="http://www.scourt.gov.ua/">Верховний Суд України</a></li>
+                    <li><a href="http://www.ccu.gov.ua/">Конституційний Суд України</a></li>
+                    <li><a href="http://www.arbitr.gov.ua/">Вищий господарський суд України</a></li>
+                </ul>
+                <p>
+                    Інші державні органи
+                </p>
+                <ul>
+                    <li><a href="http://www.cvk.gov.ua/">Центральна виборча комісія України</a></li>
+                    <li><a href="http://www.rainbow.gov.ua/">Рада національної безпеки і оборони України</a></li>
+                    <li><a href="http://www.ombudsman.gov.ua/">Уповноважений з прав людини</a></li>
+                    <li><a href="http://www.ac-rada.gov.ua/">Рахункова палата України</a></li>
+                </ul>
+            </div>
+    </div></li>
+    <li class="last">
+        <a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistter.html#" class="root">Новини</a>
+        <div class="submenu">
+            <div class="submenu_col">
+                <h3>Оперативні новини</h3>
+                <ul>
+                    <li><a href="http://iportal.rada.gov.ua/news/Novyny/Povidomlennya/">Повідомлення  </a></li>
+                    <li><a href="http://iportal.rada.gov.ua/preview/anonsy_podij/">Анонси подій</a></li>
+                    <li><a href="http://iportal.rada.gov.ua/news/Novyny/Plenarni_zasidannya/">Пленарні засідання</a></li>
+                    <li><a href="http://iportal.rada.gov.ua/news/Novyny/Parlamentski_slukhannya/">Парламентські слухання</a></li>
+                    <li><a href="http://iportal.rada.gov.ua/news/Novyny/Dni_Uryadu/">Дні Уряду</a></li>
+                </ul>
+            </div>
+            <div class="submenu_col">
+                <h3>Огляди ЗМІ</h3>
+                <ul>
+                    <li><a href="http://iportal.rada.gov.ua/documents/Parlament_u_dzerkali_zmi">ЗМІ про парламент</a></li>
+                    <li><a href="http://lib.rada.gov.ua/static/LIBRARY/monitor/degist-region.htm">Огляд регіональної преси</a></li>
+                    <li><a href="http://iportal.rada.gov.ua/documents/Oglad_reg_ZMIvf/49243.html">Архів оглядів регіональної преси</a></li>
+                    <li><a href="http://iportal.rada.gov.ua/documents/Parlam_visti/">Парламентські вісті</a></li>
+                </ul>
+            </div>
+            <div class="submenu_col">
+                <h3>Мультимедіа</h3>
+                <ul>
+                    <li><a href="http://iportal.rada.gov.ua/gallery/">Фото</a></li>
+                    <li><a href="http://iportal.rada.gov.ua/video/">Відео</a></li>
+                    <li><a href="http://iportal.rada.gov.ua/audio/">Аудіо</a></li>
+                </ul>
+            </div>
+        </div>
+    </li>
+</ul>
+<!-- cut TOP MENU-->
+		
+               
+            
+        </div>
+ 
+ 
+   	
+        </div>
+	<!-- end header -->
+<!--Content-->
+	<div class="main">
+     
+<div align="left" style="padding: 20px;">
+          <table width="90%" border="0" cellspacing="0" cellpadding="3" align="center" class="Otable">
+            <tbody><tr> 
+              <td width="40%" valign="top"> 
+                <div class="topTitle"> 
+                  <p><b><font color="#333333">РЕГІОНИ</font></b></p>
+                  <ul>
+                    <li class="topTitle"><a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistkr.html">Автономна Республіка Крим</a></li>
+                    <li class="topTitle"><a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistvin.html">Вінницька 
+                      область</a></li>
+                    <li class="topTitle"><a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistvol.html">Волинська 
+                      область</a></li>
+                    <li class="topTitle"><a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistdni.html">Дніпропетровська 
+                      область</a></li>
+                    <li class="topTitle"><a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistdon.html">Донецька 
+                      область</a></li>
+                    <li class="topTitle"><a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistgit.html">Житомирська 
+                      область</a></li>
+                    <li class="topTitle"><a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistzak.html">Закарпатська 
+                      область</a></li>
+                    <li class="topTitle"><a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistzap.html">Запорізька 
+                      область</a></li>
+                    <li class="topTitle"><a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistifr.html">Івано-Франківська 
+                      область</a></li>
+                    <li class="topTitle"><a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistko.html">Київська 
+                      область</a></li>
+                    <li class="topTitle"><a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistkir.html">Кіровоградська 
+                      область</a></li>
+                    <li class="topTitle"><a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistlug.html">Луганська 
+                      область</a></li>
+                    <li class="topTitle"><a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistlv.html">Львівська 
+                      область</a></li>
+                    <li class="topTitle"><a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistmuk.html">Миколаївська 
+                      область</a></li>
+                    <li class="topTitle"><a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistod.html">Одеська 
+                      область</a></li>
+                    <li class="topTitle"><a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistpo.html">Полтавська 
+                      область</a></li>
+                    <li class="topTitle"><a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistriv.html">Рівненська 
+                      область</a></li>
+                    <li class="topTitle"><a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistsum.html">Сумська 
+                      область</a></li>
+                    <li class="topTitle"><a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistter.html">Тернопільська 
+                      область</a></li>
+                    <li class="topTitle"><a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistxar.html">Харківська 
+                      область</a></li>
+                    <li class="topTitle"><a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistxe.html">Херсонська 
+                      область</a></li>
+                    <li class="topTitle"><a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistxm.html">Хмельницька 
+                      область</a></li>
+                    <li class="topTitle"><a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistck.html">Черкаська 
+                      область</a></li>
+                    <li class="topTitle"><a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistcv.html">Чернівецька 
+                      область</a></li>
+                    <li class="topTitle"><a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistcg.html">Чернігівська 
+                      область</a></li>
+                    <li class="topTitle"><a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistkv.html">м. 
+                      Київ</a></li>
+                    <li><a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistsev.html">м.</a><a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmistsev.html">Севастополь</a> 
+                    </li>
+                  </ul>
+                </div>
+              </td>
+              <td width="60%" valign="top"> 
+                <p>&nbsp;</p>
+                <p align="center">2.19. <strong>Адміністративно-територіальний 
+                  устрій Тернопільської області</strong></p>
+                <table border="0" cellspacing="0" cellpadding="3" width="100%" class="Otable">
+                  <tbody><tr> 
+                    <td valign="top" class="topTitle"> 
+                      <p> <a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/d191.rtf">1. Відомості про райони, 
+                        міста і селища міського типу Тернопільської області </a></p>
+                      <p align="left"><a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/d192.rtf">2. Населені 
+                        пункти Тернопільської області. Міста обласного значення</a></p>
+                      <a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/d193.rtf">3. Населені пункти Тернопільської 
+                      області. Райони</a> 
+                      <p>&nbsp;</p>
+                      <p><a href="http://static.rada.gov.ua/zakon/new/NEWSAIT/ADM/zmist.html"> <img src="./zmistter_files/icon11.gif" width="21" height="22" border="0"><font size="1"><i> 
+                        Повернутись до змісту</i></font></a> </p>
+                    </td>
+                  </tr>
+                </tbody></table>
+                <p>&nbsp;</p>
+              </td>
+            </tr>
+          </tbody></table>
+        </div>
+﻿</div>
+<!-- footer -->
+    <div id="empty"></div>
+    <div id="footer">
+    	<div class="footer">
+        	<div class="footer_ins">
+        		<div class="footer_mask"></div>
+                <div class="copy">
+                	 © Верховна Рада України 1994-2015<br>
+                     програмно-технічна підтримка — Управління комп'ютеризованих систем<br>
+					 Iнформаційна підтримка — 
+                </div>
+            </div>    
+        </div>
+    </div>
+    <!-- end footer -->
+		</div></body></html>
